@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Live Score</title>
+<style>
+body{font-family:Arial,sans-serif;text-align:center;margin:40px}
+.card{max-width:500px;margin:auto;padding:20px;border:1px solid #ccc;border-radius:10px}
+input{margin:5px;padding:8px}
+button{padding:8px 12px}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Cricket Live Score</h1>
+<h2 id="score">0/0</h2>
+<p id="overs">Overs: 0.0</p>
+
+<h3>Scorer Panel</h3>
+<input type="number" id="runs" placeholder="Runs">
+<input type="number" id="wkts" placeholder="Wickets"><br>
+<input type="text" id="ov" placeholder="Overs">
+<button onclick="updateScore()">Update</button>
+</div>
+
+<script>
+function updateScore(){
+ document.getElementById('score').innerText =
+   document.getElementById('runs').value + "/" +
+   document.getElementById('wkts').value;
+ document.getElementById('overs').innerText =
+   "Overs: " + document.getElementById('ov').value;
+}
+</script>
+</body>
+</html>
